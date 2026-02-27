@@ -3,6 +3,16 @@
 import Button from '../ui/Button';
 
 export default function Start(){
+    
+    const scrollToSection = (id: string) => {
+        const section = document.getElementById(id);
+        if (section) {
+            const yOffset = -80;
+            const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+            window.scrollTo({ top: y, behavior: "smooth" });
+        }
+    };
+
     return (
         <div id="start" className="flex flex-col items-center justify-center h-screen w-full space-y-2 px-4 md:px-0
         bg-[#fff5f9] dark:bg-[#120a1f]
@@ -26,8 +36,8 @@ export default function Start(){
                 text-[#4a376899] dark:text-[#ffeaf3be]">I'm a web developer who loves transforming ideas into meaningful digital experiences.</h3>
 
                 <div className="flex flex-row gap-8 mt-10">
-                    <Button phrase="See Projects" color="projects" onClick={() => console.log("clicked!")} disabled={false}/>
-                    <Button phrase="Get in touch" color="allProjects" onClick={() => console.log("clicked 2!")} disabled={false}/>
+                    <Button phrase="See Projects" color="projects" onClick={() => scrollToSection("projects")} disabled={false}/>
+                    <Button phrase="Get in touch" color="allProjects" onClick={() => scrollToSection("contact")} disabled={false}/>
                 </div>
             </div>
 
