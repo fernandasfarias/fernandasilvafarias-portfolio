@@ -7,6 +7,8 @@ import { IoMoonOutline } from "react-icons/io5";
 
 import { useTheme } from 'next-themes';
 
+import Link from 'next/link';
+
 export default function NavBar(){
 
     const[open, setOpen] = useState(false);
@@ -54,9 +56,9 @@ export default function NavBar(){
             <section className="hidden md:flex items-center justify-center gap-6
             text-black dark:text-white">
                 
-                <a href="#" className="text-xl font-medium 
+                <Link href="/sections/Start" className="text-xl font-medium 
                 hover:text-[#c77dff] dark:hover:text-[#f8c8dc]
-                transition-colors">Start</a>
+                transition-colors">Start</Link>
 
                 <a href="#" className="text-xl font-medium 
                 hover:text-[#c77dff] dark:hover:text-[#f8c8dc]
