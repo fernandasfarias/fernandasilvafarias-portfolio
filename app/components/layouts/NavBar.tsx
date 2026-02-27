@@ -30,6 +30,8 @@ export default function NavBar(){
         };
     }, []);
 
+    const changeTheme = () => { setTheme(theme === "light" ? "dark":"light"); };
+
     return(
         <nav
          ref={navRef}
@@ -69,6 +71,13 @@ export default function NavBar(){
                 transition-colors">Contact</a>
             </section>
 
+            {/* light and dark mode button for mobile -> aparece somente no mobile*/}
+            <section className="text-3xl block md:hidden">
+                <button onClick={changeTheme}>
+                    {theme === "light" ? <IoMoonOutline className="text-black"/>:<CiSun className="text-white"/>}
+                </button>
+            </section>
+
             { /* mobile button */}
             <button className="md:hidden" 
             onClick={() => setOpen(!open)}
@@ -105,8 +114,12 @@ export default function NavBar(){
                 </div>
             )}
 
-            <button onClick={() => setTheme('light')}><CiSun></CiSun></button>
-            <button onClick={() => setTheme('dark')}><IoMoonOutline></IoMoonOutline></button>
+            {/* light e dark mode button que aparece apenas de md para cima */}
+            <section className="text-3xl hidden md:block">
+                <button onClick={changeTheme}>
+                    {theme === "light" ? <IoMoonOutline className="text-black"/>:<CiSun className="text-white"/>}
+                </button>
+            </section>
 
         </nav>
     );
