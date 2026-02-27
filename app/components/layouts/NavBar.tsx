@@ -40,10 +40,10 @@ export default function NavBar(){
          backdrop-blur-lg
          w-full z-50 px-10 py-6
          border-b border-[#f8c8dc]/40 dark:border-white/10
-         flex items-center justify-between">
+         flex flex-row items-center justify-between">
             
             {/* logo/name */}
-            <h2 className="text-3xl font-bold
+            <h2 className="text-3xl md:text-4xl font-bold
             bg-gradient-to-r 
             from-[#c77dff] 
             via-[#a8daff]
@@ -54,37 +54,36 @@ export default function NavBar(){
             <section className="hidden md:flex items-center justify-center gap-6
             text-black dark:text-white">
                 
-                <a href="#" className="text-base font-medium 
+                <a href="#" className="text-xl font-medium 
                 hover:text-[#c77dff] dark:hover:text-[#f8c8dc]
                 transition-colors">Start</a>
 
-                <a href="#" className="text-base font-medium 
+                <a href="#" className="text-xl font-medium 
                 hover:text-[#c77dff] dark:hover:text-[#f8c8dc]
                 transition-colors">About</a>
 
-                <a href="#" className="text-base font-medium 
+                <a href="#" className="text-xl font-medium 
                 hover:text-[#c77dff] dark:hover:text-[#f8c8dc]
                 transition-colors">Projects</a>
 
-                <a href="#" className="text-base font-medium 
+                <a href="#" className="text-xl font-medium 
                 hover:text-[#c77dff] dark:hover:text-[#f8c8dc]
                 transition-colors">Contact</a>
             </section>
 
             {/* light and dark mode button for mobile -> aparece somente no mobile*/}
-            <section className="text-3xl block md:hidden">
-                <button onClick={changeTheme}>
-                    {theme === "light" ? <IoMoonOutline className="text-black"/>:<CiSun className="text-white"/>}
+            <section className="block md:hidden">
+                <button onClick={changeTheme} className="flex items-center justify-center h-8 w-8  text-black dark:text-white hover:text-[#c77dff] dark:hover:text-[#f8c8dc] transition-colors duration-300">
+                    {theme === "light" ? <IoMoonOutline className="text-3xl"/>:<CiSun className="text-6xl"/>}
                 </button>
             </section>
 
             { /* mobile button */}
-            <button className="md:hidden" 
+            <button className="md:hidden text-black dark:text-white hover:text-[#c77dff] dark:hover:text-[#f8c8dc] transition-colors duration-300" 
             onClick={() => setOpen(!open)}
             aria-label="toogle menu"
             >
-                <GiHamburgerMenu className="text-3xl text-black dark:text-white
-                hover:text-[#f8c8dc]"/>
+                <GiHamburgerMenu className="text-3xl"/>
             </button>
 
             { /* menu mobile */}
@@ -116,8 +115,8 @@ export default function NavBar(){
 
             {/* light e dark mode button que aparece apenas de md para cima */}
             <section className="text-3xl hidden md:block">
-                <button onClick={changeTheme}>
-                    {theme === "light" ? <IoMoonOutline className="text-black"/>:<CiSun className="text-white"/>}
+                <button onClick={changeTheme} className="flex items-center justify-center h-8 w-8 text-black dark:text-white hover:text-[#c77dff] dark:hover:text-[#f8c8dc] transition-colors duration-300">
+                    {theme === "light" ? <IoMoonOutline className="text-3xl"/>:<CiSun className="text-6xl"/>}
                 </button>
             </section>
 
