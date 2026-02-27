@@ -32,6 +32,15 @@ export default function NavBar(){
         };
     }, []);
 
+    const scrollToSection = (id: string) => {
+        const section = document.getElementById(id);
+        if (section) {
+            const yOffset = -80;
+            const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+            window.scrollTo({ top: y, behavior: "smooth" });
+        }
+    };
+
     const changeTheme = () => { setTheme(theme === "light" ? "dark":"light"); };
 
     return(
@@ -56,21 +65,21 @@ export default function NavBar(){
             <section className="hidden md:flex items-center justify-center gap-6
             text-black dark:text-white">
                 
-                <Link href="/sections/Start" className="text-xl font-medium 
+                <button onClick={() => scrollToSection("start")} className="text-xl font-medium 
                 hover:text-[#c77dff] dark:hover:text-[#f8c8dc]
-                transition-colors">Start</Link>
+                transition-colors">Start</button>
 
-                <a href="#" className="text-xl font-medium 
+                <button onClick={() => scrollToSection("about")} className="text-xl font-medium 
                 hover:text-[#c77dff] dark:hover:text-[#f8c8dc]
-                transition-colors">About</a>
+                transition-colors">About</button>
 
-                <a href="#" className="text-xl font-medium 
+                <button onClick={() => scrollToSection("projects")} className="text-xl font-medium 
                 hover:text-[#c77dff] dark:hover:text-[#f8c8dc]
-                transition-colors">Projects</a>
+                transition-colors">Projects</button>
 
-                <a href="#" className="text-xl font-medium 
+                <button onClick={() => scrollToSection("contact")} className="text-xl font-medium 
                 hover:text-[#c77dff] dark:hover:text-[#f8c8dc]
-                transition-colors">Contact</a>
+                transition-colors">Contact</button>
             </section>
 
             {/* light and dark mode button for mobile -> aparece somente no mobile*/}
@@ -97,21 +106,21 @@ export default function NavBar(){
                 gap-4 py-4
                 border-b border-[#f8c8dc]/40 dark:border-white/10 md:hidden">
 
-                    <a href="#" className="text-base font-medium 
+                    <button onClick={() => scrollToSection("start")} className="text-base font-medium 
                     hover:text-[#c77dff] dark:hover:text-[#f8c8dc]
-                    transition-colors">Start</a>
+                    transition-colors">Start</button>
 
-                    <a href="#" className="text-base font-medium 
+                    <button onClick={() => scrollToSection("about")} className="text-base font-medium 
                     hover:text-[#c77dff] dark:hover:text-[#f8c8dc]
-                    transition-colors">About</a>
+                    transition-colors">About</button>
 
-                    <a href="#" className="text-base font-medium 
+                    <button onClick={() => scrollToSection("projects")} className="text-base font-medium 
                     hover:text-[#c77dff] dark:hover:text-[#f8c8dc]
-                    transition-colors">Projects</a>
+                    transition-colors">Projects</button>
 
-                    <a href="#" className="text-base font-medium 
+                    <button onClick={() => scrollToSection("contact")} className="text-base font-medium 
                     hover:text-[#c77dff] dark:hover:text-[#f8c8dc]
-                    transition-colors">Contact</a>
+                    transition-colors">Contact</button>
                 </div>
             )}
 
