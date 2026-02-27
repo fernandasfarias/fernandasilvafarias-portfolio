@@ -8,13 +8,13 @@ export default function About(){
     return (
         <div id="about" className="flex flex-col items-center
         bg-[#fff5f9] dark:bg-[#120a1f] min-h-screen w-full relative
-        p-8 space-y-4 scroll-margin-top: 80px;">
+        p-8 scroll-margin-top: 80px;">
             
             <h2 className="sticky top-0 text-4xl md:text-6xl font-bold 
             bg-gradient-to-r bg-clip-text text-transparent inline-block from-[#ab9ff8] to-[#d7cdf9] text-xenter">About me</h2>
 
             <h3 className="text-lg md:text-2xl text-[#4a376899] dark:text-[#ffeaf3be]
-            mt-2 text-center mb-15">
+            mt-0 text-center mb-7">
                 A technology and innovation enthusiast
             </h3>
 
@@ -34,11 +34,11 @@ export default function About(){
             <section
             className="border-2 border-[#d8c4f5]
             bg-gradient-to-r from-[#ecd9ff] via-[#d8c4f5] to-[#cfe9ff]
-            rounded-2xl p-4 mt-4 w-[90%] mx-auto
+            rounded-2xl p-4 mt-7 w-[90%] min-w-[300px] max-w-5xl mx-auto
             hover:scale-105 transition duration-1000 ease-in-out hover:shadow-lg"
             >
                 <h2
-                className="text-2xl font-bold mb-4">My journey</h2>
+                className="text-2xl font-bold mb-4 text-black">My journey</h2>
 
                 <p className="text-[#0f0225b6]">I'm an Information Systems student entering my fifth semester at the Federal University of Sergipe (UFS). I'm constantly exploring new tools and deepening my knowledge to build meaningful projects and strengthen my technical foundation. I currently serve as a volunteer at Softeam, the Computer Science Junior Enterprise, where I continue to grow both technically and professionally.</p>
 
