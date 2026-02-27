@@ -27,11 +27,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <script>document.documentElement.classList.add('js')</script>
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <Providers>
           <Navbar/>
           {children}
         </Providers>
+        <script src="https://unpkg.com/taos@1.0.5/dist/taos.js"></script>
       </body>
     </html>
   );

@@ -1,13 +1,12 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+
 import { GiHamburgerMenu } from "react-icons/gi";
 import { CiSun } from "react-icons/ci";
 import { IoMoonOutline } from "react-icons/io5";
 
 import { useTheme } from 'next-themes';
-
-import Link from 'next/link';
 
 export default function NavBar(){
 
@@ -53,7 +52,7 @@ export default function NavBar(){
          border-b border-[#f8c8dc]/40 dark:border-white/10
          flex flex-row items-center justify-between">
             
-            {/* logo/name */}
+            {/* LEFT: NAME */}
             <h2 className="text-3xl md:text-4xl font-bold
             bg-gradient-to-r 
             from-[#c77dff] 
@@ -61,8 +60,8 @@ export default function NavBar(){
             to-[#f8c8dc]
             bg-clip-text text-transparent inline-block">Fernanda</h2>
             
-            {/* links - for desktop and tablets */}
-            <section className="hidden md:flex items-center justify-center gap-6
+            {/* MIDDLE (md+): links - for desktop and tablets */}
+            <section className="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-6
             text-black dark:text-white">
                 
                 <button onClick={() => scrollToSection("start")} className="text-xl font-medium 
@@ -82,54 +81,63 @@ export default function NavBar(){
                 transition-colors">Contact</button>
             </section>
 
-            {/* light and dark mode button for mobile -> aparece somente no mobile*/}
-            <section className="block md:hidden">
-                <button onClick={changeTheme} className="flex items-center justify-center h-8 w-8  text-black dark:text-white hover:text-[#c77dff] dark:hover:text-[#f8c8dc] transition-colors duration-300">
-                    {theme === "light" ? <IoMoonOutline className="text-3xl"/>:<CiSun className="text-6xl"/>}
-                </button>
-            </section>
+            {/* CENTRALIZANDO OS ELEMENTOS DA DIREITA */}
+            <div className="flex items-center gap-4">
 
-            { /* mobile button */}
-            <button className="md:hidden text-black dark:text-white hover:text-[#c77dff] dark:hover:text-[#f8c8dc] transition-colors duration-300" 
-            onClick={() => setOpen(!open)}
-            aria-label="toogle menu"
-            >
-                <GiHamburgerMenu className="text-3xl"/>
-            </button>
+                {/* light and dark mode md+*/}
+                <section className="text-3xl hidden md:block">
+                    <button onClick={changeTheme} className="flex items-center justify-center h-8 w-8 text-black dark:text-white hover:text-[#c77dff] dark:hover:text-[#f8c8dc] transition-colors duration-300">
+                        {theme === "light" ? <IoMoonOutline className="text-3xl"/>:<CiSun className="text-3xl"/>}
+                    </button>
+                </section>
 
-            { /* menu mobile */}
-            {open && (
-                <div className="absolute top-full left-0 w-full
-                bg-white/80 dark:bg-[#261638] backdrop-blur-lg
-                text-black dark:text-white
-                flex flex-col items-center
-                gap-4 py-4
-                border-b border-[#f8c8dc]/40 dark:border-white/10 md:hidden">
+                {/* MOBILE button dark/light mode and menu button */}
+                <div className="flex flex-row gap-2">
+                    
+                    {/* light and dark mode button for mobile -> aparece somente no mobile*/}
+                    <section className="md:hidden">
+                        <button onClick={changeTheme} className="flex items-center justify-center h-8 w-8  text-black dark:text-white hover:text-[#c77dff] dark:hover:text-[#f8c8dc] transition-colors duration-300">
+                            {theme === "light" ? <IoMoonOutline className="text-3xl"/>:<CiSun className="text-3xl"/>}
+                        </button>
+                    </section>
 
-                    <button onClick={() => scrollToSection("start")} className="text-base font-medium 
-                    hover:text-[#c77dff] dark:hover:text-[#f8c8dc]
-                    transition-colors">Start</button>
-
-                    <button onClick={() => scrollToSection("about")} className="text-base font-medium 
-                    hover:text-[#c77dff] dark:hover:text-[#f8c8dc]
-                    transition-colors">About</button>
-
-                    <button onClick={() => scrollToSection("projects")} className="text-base font-medium 
-                    hover:text-[#c77dff] dark:hover:text-[#f8c8dc]
-                    transition-colors">Projects</button>
-
-                    <button onClick={() => scrollToSection("contact")} className="text-base font-medium 
-                    hover:text-[#c77dff] dark:hover:text-[#f8c8dc]
-                    transition-colors">Contact</button>
+                    { /* mobile button */}
+                    <button className="md:hidden text-black dark:text-white hover:text-[#c77dff] dark:hover:text-[#f8c8dc] transition-colors duration-300" 
+                    onClick={() => setOpen(!open)}
+                    aria-label="toogle menu"
+                    >
+                        <GiHamburgerMenu className="text-3xl"/>
+                    </button>
                 </div>
-            )}
 
-            {/* light e dark mode button que aparece apenas de md para cima */}
-            <section className="text-3xl hidden md:block">
-                <button onClick={changeTheme} className="flex items-center justify-center h-8 w-8 text-black dark:text-white hover:text-[#c77dff] dark:hover:text-[#f8c8dc] transition-colors duration-300">
-                    {theme === "light" ? <IoMoonOutline className="text-3xl"/>:<CiSun className="text-6xl"/>}
-                </button>
-            </section>
+                { /* menu mobile */}
+                {open && (
+                    <div className="absolute top-full left-0 w-full
+                    bg-white/80 dark:bg-[#261638] backdrop-blur-lg
+                    text-black dark:text-white
+                    flex flex-col items-center
+                    gap-4 py-4
+                    border-b border-[#f8c8dc]/40 dark:border-white/10 md:hidden">
+
+                        <button onClick={() => scrollToSection("start")} className="text-base font-medium 
+                        hover:text-[#c77dff] dark:hover:text-[#f8c8dc]
+                        transition-colors">Start</button>
+
+                        <button onClick={() => scrollToSection("about")} className="text-base font-medium 
+                        hover:text-[#c77dff] dark:hover:text-[#f8c8dc]
+                        transition-colors">About</button>
+
+                        <button onClick={() => scrollToSection("projects")} className="text-base font-medium 
+                        hover:text-[#c77dff] dark:hover:text-[#f8c8dc]
+                        transition-colors">Projects</button>
+
+                        <button onClick={() => scrollToSection("contact")} className="text-base font-medium 
+                        hover:text-[#c77dff] dark:hover:text-[#f8c8dc]
+                        transition-colors">Contact</button>
+                    </div>
+                )}
+
+            </div>
 
         </nav>
     );

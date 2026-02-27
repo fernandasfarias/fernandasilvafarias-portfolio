@@ -7,7 +7,7 @@ type ButtonProps = {
 
 export default function Button( { phrase, color = "projects", onClick, disabled = false }: ButtonProps){
 
-    const transition = "hover:scale-110 transition duration-600 ease-in-out";
+    const transition = "transition-all duration-500 ease-out hover:scale-110";
 
     const buttonColors = {
         projects: "bg-[#c77dff] text-white dark:text-black hover:bg-[#e2aaff]",
@@ -15,7 +15,7 @@ export default function Button( { phrase, color = "projects", onClick, disabled 
         allProjects: "bg-gradient-to-r inline-block from-[#b392ff] via-[#ab9ff8] to-[#7fc0e6] hover:from-[#c8b7ff] hover:via-[#c0b5fc] hover:to-[#99d0f0]"
     };
 
-    const buttonBasicStyle = "px-5 py-2 md:px-10 py-3 rounded-4xl";
+    const buttonBasicStyle = "px-5 py-2 md:px-10 py-3 rounded-3xl";
 
     return(
         <div>
