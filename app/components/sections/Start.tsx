@@ -19,7 +19,7 @@ export default function Start(){
         text-black dark:text-white scroll-mt: 80px;">
 
             <h1 className="text-5xl md:text-8xl font-bold text-center mb-1
-            bg-gradient-to-r bg-clip-text text-transparent inline-block from-[#ab9ff8] via-[#c8b7ff] to-[#99d0f0]">Hi! I am Fernanda</h1>
+            bg-gradient-to-r bg-clip-text text-transparent from-[#ab9ff8] via-[#c8b7ff] to-[#99d0f0]">Hi! I am Fernanda</h1>
 
             <h2 
             className="text-2xl md:text-4xl mt-0 text-center

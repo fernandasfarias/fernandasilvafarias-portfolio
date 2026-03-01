@@ -11,14 +11,15 @@ export default function About(){
         p-8 scroll-margin-top: 80px;">
             
             <h2 className="sticky top-0 text-4xl md:text-6xl font-bold 
-            bg-gradient-to-r bg-clip-text text-transparent inline-block from-[#ab9ff8] to-[#d7cdf9] text-xenter">About me</h2>
+            bg-gradient-to-r bg-clip-text text-transparent from-[#ab9ff8] to-[#d7cdf9]">About me</h2>
 
             <h3 className="text-lg md:text-2xl text-[#4a376899] dark:text-[#ffeaf3be]
             mt-0 text-center mb-7">
                 A technology and innovation enthusiast
             </h3>
 
-            <section className="grid md:grid-cols-3 gap-8">
+            <section className="grid md:grid-cols-3 gap-8 items-stretch">
+                {/* obs.: items-stretch - todos os itens do grid tem a mesma altura */}
                 
                 {/* card for web development */}
                 <Cards icon={IoCodeSlash} title="Web Development" details="Exploring modern technologies to build intuitive and responsive interfaces. Learning React, TypeScript, and modern frameworks" backgroundColor="#ecd9ff" iconColor="#c77dff"/>
