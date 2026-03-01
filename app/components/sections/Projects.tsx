@@ -1,10 +1,15 @@
+'use client';
+
 import CardsProjects from '../ui/CardsProjects';
 import { projects } from '../../../data/myProjects';
+
+import Button from '../ui/Button';
+import { GrDisabledOutline } from 'react-icons/gr';
 
 export default function Projects(){
     return(
         <div id="projects" className="flex flex-col items-center justify-center
-        min-h w-full relative p-8 scroll-margin-top: 80px
+        min-h-screen w-full relative p-8 scroll-mt: 80px
         bg-[#fff5f9] dark:bg-[#1a112a]">
 
             <h2 className="sticky top-0 text-4xl md:text-6xl font-bold pb-2
@@ -17,12 +22,13 @@ export default function Projects(){
                 Some of the projects I developed throughout my learning journey
             </h3>
 
-            <section className="grid md:grid-cols-2 gap-8">
+            <section className="grid md:grid-cols-2 gap-8 mb-10">
                 {projects.map((project) => (
                     <CardsProjects key={project.title} project={project}/>
                 ))}
             </section>
             
+            <Button phrase="See all projects" color="allProjects" onClick={() => (window.location.href='https://github.com/fernandasfarias?tab=repositories')} disabled={false}/>
         </div>
     )
 }
