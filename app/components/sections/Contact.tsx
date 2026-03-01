@@ -50,56 +50,61 @@ export default function(){
                     <div className="grid grid-cols-2 grid-rows-2 gap-10 place-items-center items-stretch cursor-pointer w-full px-8 md:px-16">
 
                         {/* Github Link */}
-                        <div className="flex flex-col items-center justify-center
-                        bg-[#fff5f9] dark:bg-[#120a1f] dark:text-white
-                        p-4 w-full rounded-xl transition duration-300
-                        hover:bg-[#dbc1ef]/70 dark:hover:bg-[#dbc1ef]/70
-                        hover:text-[#c38be5] dark:hover:text-[#c38be5]
-                        border-2 border-[#fff5f9] dark:border-[#120a1f]
-                        hover:border-2 hover:border-[#c38be5] dark:hover:border-[#c38be5]">
+                        <a href="https://github.com/fernandasfarias" target="_blank" rel="noopener noreferrer" className="w-full">
+                            <div className="flex flex-col items-center justify-center
+                            bg-[#fff5f9] dark:bg-[#120a1f] dark:text-white
+                            p-4 rounded-xl transition duration-300
+                            hover:bg-[#dbc1ef]/70 dark:hover:bg-[#dbc1ef]/70
+                            hover:text-[#c38be5] dark:hover:text-[#c38be5]
+                            border-2 border-[#fff5f9] dark:border-[#120a1f]
+                            hover:border-2 hover:border-[#c38be5] dark:hover:border-[#c38be5]">
 
-                            <FiGithub size={35}/>
-                            <a href="https://github.com/fernandasfarias" target="_blank" rel="noopener noreferrer">Github</a>
-
-                        </div>
+                                <FiGithub size={35}/>
+                                <p>GitHub</p>
+                            </div>
+                        </a>
 
                         {/* Linkedin Link */}
-                        <div className="flex flex-col items-center justify-center bg-[#fff5f9] p-4 w-full rounded-xl dark:bg-[#120a1f] dark:text-white
-                       transition duration-300
-                       hover:bg-[#cce4ff]/70 dark:hover:bg-[#cce4ff]/70
-                       hover:text-[#66b3ff] dark:hover:text-[#66b3ff]
-                       border-2 border-[#fff5f9] dark:border-[#120a1f]
-                       hover:border-2 hover:border-[#66b3ff] dark:hover:border-[#66b3ff]">
+                        <a href="https://www.linkedin.com/in/fernandaafariass/" target="_blank" rel="noopener noreferrer" className="w-full">
+                            <div className="flex flex-col items-center justify-center bg-[#fff5f9] p-4 rounded-xl dark:bg-[#120a1f] dark:text-white
+                            transition duration-300
+                            hover:bg-[#cce4ff]/70 dark:hover:bg-[#cce4ff]/70
+                            hover:text-[#66b3ff] dark:hover:text-[#66b3ff]
+                            border-2 border-[#fff5f9] dark:border-[#120a1f]
+                            hover:border-2 hover:border-[#66b3ff] dark:hover:border-[#66b3ff]">
 
-                            <LuLinkedin size={35}/>
-                            <a href="https://www.linkedin.com/in/fernandaafariass/" target="_blank" rel="noopener noreferrer">Linkedin</a>
+                                <LuLinkedin size={35}/>
+                                <p>Linkedin</p>
 
-                        </div>
+                            </div>
+                        </a>
 
                         {/* Instagram Link */}
-                        <div className="flex flex-col items-center justify-center bg-[#fff5f9] p-4 w-full rounded-xl dark:bg-[#120a1f] dark:text-white
-                        transition duration-300
-                        hover:bg-[#fde6f1]/50 dark:hover:bg-[#fde6f1]/50
-                        hover:text-[#f39fcf] dark:hover:text-[#f39fcf]
-                        border-2 border-[#fff5f9] dark:border-[#120a1f]
-                        hover:border-2 hover:border-[#f39fcf] dark:hover:border-[#f39fcf]">
+                        <a href="https://www.instagram.com/nandasfarias_/" target="_blank" rel="noopener noreferrer" className="w-full">
+                            <div className="flex flex-col items-center justify-center bg-[#fff5f9] p-4 rounded-xl dark:bg-[#120a1f] dark:text-white
+                            transition duration-300
+                            hover:bg-[#fde6f1]/50 dark:hover:bg-[#fde6f1]/50
+                            hover:text-[#f39fcf] dark:hover:text-[#f39fcf]
+                            border-2 border-[#fff5f9] dark:border-[#120a1f]
+                            hover:border-2 hover:border-[#f39fcf] dark:hover:border-[#f39fcf]">
 
-                            <FiInstagram size={35}/>
-                            <a href="https://www.instagram.com/nandasfarias_/" target="_blank" rel="noopener noreferrer">Instagram</a>
-
-                        </div>
+                                <FiInstagram size={35}/>
+                                <p>Instagram</p>
+                            </div>
+                        </a>
 
                         {/* e-mail link*/}
-                        <div className="flex flex-col items-center justify-center bg-[#fff5f9] p-4 w-full rounded-xl dark:bg-[#120a1f] dark:text-white
-                        transition duration-300
-                        hover:bg-[#dbc1ef]/70 dark:hover:bg-[#dbc1ef]/70
-                        hover:text-[#c38be5] dark:hover:text-[#c38be5]
-                        border-2 border-[#fff5f9] dark:border-[#120a1f] hover:border-2 hover:border-[#c38be5] dark:hover:border-[#c38be5]">
+                        <a href="mailto:fernandafariass734@gmail.com" className="w-full">
+                            <div className="flex flex-col items-center justify-center bg-[#fff5f9] p-4 rounded-xl dark:bg-[#120a1f] dark:text-white
+                            transition duration-300
+                            hover:bg-[#dbc1ef]/70 dark:hover:bg-[#dbc1ef]/70
+                            hover:text-[#c38be5] dark:hover:text-[#c38be5]
+                            border-2 border-[#fff5f9] dark:border-[#120a1f] hover:border-2 hover:border-[#c38be5] dark:hover:border-[#c38be5]">
 
-                            <MdOutlineEmail size={35}/>
-                            <a href="mailto:fernandafariass734@gmail.com">E-mail</a>
-
-                        </div>
+                                <MdOutlineEmail size={35}/>
+                                <p>E-mail</p>
+                            </div>
+                        </a>
 
                     </div>
 
