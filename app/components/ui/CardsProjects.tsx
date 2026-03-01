@@ -50,6 +50,7 @@ export default function CardsProjects( { project }: CardsProjectsProps ){
                     ))}
                 </div>
                 
+                {/** demoLink */}
                 <div className="flex gap-3">
 
                     <div className="flex items-center gap-0.5 mt-5 group hover:underline text-[#c77dff] hover:#c77dff">
@@ -61,6 +62,7 @@ export default function CardsProjects( { project }: CardsProjectsProps ){
                         )}
                     </div>
                     
+                    {/* github link */}
                     <div className="flex items-center gap-0.5 mt-5 group hover:underline text-[#c77dff] hover:#c77dff">
                         <FiGithub/>
                         <a href={project.githubLink}>Code</a>

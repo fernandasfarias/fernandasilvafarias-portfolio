@@ -9,7 +9,7 @@ import { GrDisabledOutline } from 'react-icons/gr';
 export default function Projects(){
     return(
         <div id="projects" className="flex flex-col items-center justify-center
-        min-h-screen w-full relative p-8 scroll-mt: 80px
+        min-h w-full relative p-8 scroll-mt-20
         bg-[#fff5f9] dark:bg-[#1a112a]">
 
             <h2 className="sticky top-0 text-4xl md:text-6xl font-bold pb-2

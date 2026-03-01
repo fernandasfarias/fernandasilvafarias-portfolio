@@ -16,7 +16,7 @@ export default function Start(){
     return (
         <div id="start" className="flex flex-col items-center justify-center h-screen w-full px-4 md:px-0
         bg-[#fff5f9] dark:bg-[#120a1f]
-        text-black dark:text-white scroll-mt: 80px;">
+        text-black dark:text-white scroll-mt-20">
 
             <h1 className="text-5xl md:text-8xl font-bold text-center mb-1
             bg-gradient-to-r bg-clip-text text-transparent from-[#ab9ff8] via-[#c8b7ff] to-[#99d0f0]">Hi! I am Fernanda</h1>
