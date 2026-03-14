@@ -28,7 +28,7 @@ export default function Projects(){
                 ))}
             </section>
             
-            <Button phrase="See all projects" color="allProjects" onClick={() => (window.location.href='https://github.com/fernandasfarias?tab=repositories')} disabled={false}/>
+            <Button phrase="See all projects" color="allProjects" onClick={() => window.open('https://github.com/fernandasfarias?tab=repositories')} disabled={false}/>
         </div>
     )
 }

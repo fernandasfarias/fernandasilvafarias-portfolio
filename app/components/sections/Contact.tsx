@@ -1,10 +1,23 @@
+"use client";
+
 import { MdOutlineEmail } from "react-icons/md"; // email icon
 import { FiGithub } from "react-icons/fi"; // github icon
 import { LuLinkedin } from "react-icons/lu"; // linkedin icon
 import { FiInstagram } from "react-icons/fi"; // instagram icon
+import { useState } from "react";
 import Link from "next/link";
 
-export default function(){
+export default function Contact(){
+    
+    const[copied, setCopied] = useState(false);
+
+    // copiar e-mail
+    const copyEmail = () => {
+        navigator.clipboard.writeText("fernandafariass734@gmail.com");
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
+    }
+    
     return(
         <div id="contact"
         className="min-h bg-[#fff5f9] dark:bg-[#120a1f]
@@ -32,9 +45,11 @@ export default function(){
 
                     <h3 className="text-normal mb-5">Feel free to contact me on my social media</h3>
 
-                    <div className="flex items-center gap-2 hover:underline hover:text-[#c77dff] dark:hover:text-[#cfe9ff]">
+                    <div 
+                    onClick={copyEmail}
+                    className="flex items-center gap-2 hover:underline hover:text-[#c77dff] dark:hover:text-[#cfe9ff] cursor-pointer">
                         <MdOutlineEmail size={25}/>
-                        <p className="text-normal">fernandafariass734@gmail.com</p>
+                        <p>{copied ? "Copied!" : "fernandafariass734@gmail.com"}</p>
                     </div>
                 </div>  
 

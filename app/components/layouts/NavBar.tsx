@@ -53,12 +53,14 @@ export default function NavBar(){
          flex flex-row items-center justify-between">
             
             {/* LEFT: NAME */}
-            <h2 className="text-3xl md:text-4xl font-bold
+            <button 
+            onClick={() => scrollToSection("start")}
+            className="text-3xl md:text-4xl font-bold
             bg-gradient-to-r 
             from-[#c77dff] 
             via-[#a8daff]
             to-[#f8c8dc]
-            bg-clip-text text-transparent inline-block">Fernanda</h2>
+            bg-clip-text text-transparent inline-block">Fernanda</button>
             
             {/* MIDDLE (md+): links - for desktop and tablets */}
             <section className="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-6
