@@ -16,9 +16,9 @@ type CardsProjectsProps = {
 
 export default function CardsProjects( { project }: CardsProjectsProps ){
     return(
-        <div className="group max-w-sm w-full h-full overflow-hidden
+        <div className="group max-w-sm w-full h-full overflow-hidden border-2 border-transparent
         hover:border-2 hover:border-[#ab9ff8] dark:hover:border-[#c77dff]
-        hover:scale-110 transition duration-1000 ease-in-out group
+        hover:scale-105 transition duration-1000 ease-in-out group
         hover:shadow-lg dark:shadow-none rounded-xl
         flex flex-col">
 
