@@ -20,7 +20,7 @@ export default function Contact(){
     
     return(
         <div id="contact"
-        className="min-h bg-[#fff5f9] dark:bg-[#120a1f]
+        className="min-h bg-[#fcfcff] dark:bg-[#120a1f]
         flex flex-col items-center justify-center scroll-mt-20 w-full p-8 px-12 md:px-8 relative">
             
             {/* title - FINISHED*/}

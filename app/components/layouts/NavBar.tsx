@@ -11,6 +11,7 @@ import { useTheme } from 'next-themes';
 export default function NavBar(){
 
     const[open, setOpen] = useState(false);
+    const[mounted, setMounted] = useState(false);
     const{theme, setTheme} = useTheme();
     const navRef = useRef<HTMLElement | null>(null);
 
@@ -41,6 +42,13 @@ export default function NavBar(){
     };
 
     const changeTheme = () => { setTheme(theme === "light" ? "dark":"light"); };
+
+    useEffect(() => {
+        const id = requestAnimationFrame(() => setMounted(true));
+        return () => cancelAnimationFrame(id);
+    }, []);
+
+    if (!mounted) return null;
 
     return(
         <nav

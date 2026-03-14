@@ -7,7 +7,7 @@ import { FiTrendingUp } from "react-icons/fi";
 export default function About(){
     return (
         <div id="about" className="flex flex-col items-center
-        bg-[#fff5f9] dark:bg-[#120a1f] min-h w-full relative
+        bg-[#fcfcff] dark:bg-[#120a1f] min-h w-full relative
         p-8 scroll-mt-20">
             
             <h2 className="sticky top-0 text-4xl md:text-6xl font-bold 
