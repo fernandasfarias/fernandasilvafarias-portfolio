@@ -3,7 +3,7 @@
 import { MdOutlineEmail } from "react-icons/md"; // email icon
 import { FiGithub } from "react-icons/fi"; // github icon
 import { LuLinkedin } from "react-icons/lu"; // linkedin icon
-import { FiInstagram } from "react-icons/fi"; // instagram icon
+import { IoBook } from "react-icons/io5"; // Lattes CV icon
 import { useState } from "react";
 import Link from "next/link";
 
@@ -94,8 +94,8 @@ export default function Contact(){
                             </div>
                         </a>
 
-                        {/* Instagram Link */}
-                        <a href="https://www.instagram.com/nandasfarias_/" target="_blank" rel="noopener noreferrer" className="w-full">
+                        {/* Lattes CV Link */}
+                        <a href="https://lattes.cnpq.br/4566444163751383" target="_blank" rel="noopener noreferrer" className="w-full">
                             <div className="flex flex-col items-center justify-center bg-[#fff5f9] p-4 rounded-xl dark:bg-[#120a1f] dark:text-white
                             transition duration-300
                             hover:bg-[#fde6f1]/50 dark:hover:bg-[#fde6f1]/50
@@ -103,8 +103,8 @@ export default function Contact(){
                             border-2 border-[#fff5f9] dark:border-[#120a1f]
                             hover:border-2 hover:border-[#f39fcf] dark:hover:border-[#f39fcf]">
 
-                                <FiInstagram size={35}/>
-                                <p>Instagram</p>
+                                <IoBook size={35}/>
+                                <p>Lattes CV</p>
                             </div>
                         </a>
 
