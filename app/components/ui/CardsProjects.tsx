@@ -32,7 +32,7 @@ export default function CardsProjects( { project }: CardsProjectsProps ){
             </div>
 
             {/* white container */}
-            <div className="bg-white flex flex-col flex-grow items-start p-4 overflow-hidden rounded-b-xl">
+            <div className="bg-[#fff5f9] dark:bg-white flex flex-col flex-grow items-start p-4 overflow-hidden rounded-b-xl">
                 {/* obs: flex-grow -> ocupa o espaço disponível */}
 
                 <h2 className="text-black font-semibold">{project.title}</h2>
