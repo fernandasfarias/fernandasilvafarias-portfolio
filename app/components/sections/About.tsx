@@ -41,7 +41,7 @@ export default function About(){
                 <h2
                 className="text-2xl font-bold mb-4 text-black">My journey</h2>
 
-                <p className="text-[#0f0225b6]">I am an Information Systems student currently in my fifth semester at the Federal University of Sergipe (UFS). I actively conduct research in the field of artificial neural networks, while continuously exploring new tools and deepening my knowledge to build meaningful projects and strengthen my technical foundation. I also serve as a volunteer at Softeam, the Computer Science Junior Enterprise, where I continue to grow both technically and professionally</p>
+                <p className="text-[#0f0225b6]">I am an Information Systems student currently in my fifth semester at the Federal University of Sergipe (UFS). I actively conduct research in the field of artificial neural networks, while continuously exploring new tools and deepening my knowledge to build meaningful projects and strengthen my technical foundation. I also serve as a volunteer at Softeam, the Computer Science Junior Enterprise, where I continue to grow both technically and professionally.</p>
 
             </section>
 
