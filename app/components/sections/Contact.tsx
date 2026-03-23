@@ -104,7 +104,7 @@ export default function Contact(){
                             hover:border-2 hover:border-[#f39fcf] dark:hover:border-[#f39fcf]">
 
                                 <IoBook size={35}/>
-                                <p>Lattes CV</p>
+                                <p>Lattes</p>
                             </div>
                         </a>
 
